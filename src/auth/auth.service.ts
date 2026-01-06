@@ -11,26 +11,26 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-//   async register(dto: RegisterDto) {
-//     const existing = await this.prisma.user.findUnique({ where: { email: dto.email } });
-//     if (existing) throw new BadRequestException('Email already exists');
+  async register(dto: RegisterDto) {
+    const existing = await this.prisma.user.findUnique({ where: { email: dto.email } });
+    if (existing) throw new BadRequestException('Email already exists');
 
-//     const hashed = await bcrypt.hash(dto.password, 10);
-//     const user = await this.prisma.user.create({
-//       data: { email: dto.email, password: hashed, name: dto.name },
-//     });
+    const hashed = await bcrypt.hash(dto.password, 10);
+    const user = await this.prisma.user.create({
+      data: { email: dto.email, password: hashed, name: dto.name },
+    });
 
-//     const token = this.jwtService.sign({ sub: user.id, email: user.email });
-//     return { token, user: { id: user.id, email: user.email, name: user.name } };
-//   }
+    const token = this.jwtService.sign({ sub: user.id, email: user.email });
+    return { token, user: { id: user.id, email: user.email, name: user.name } };
+  }
 
-//   async login(dto: LoginDto) {
-//     const user = await this.prisma.user.findUnique({ where: { email: dto.email } });
-//     if (!user || !(await bcrypt.compare(dto.password, user.password))) {
-//       throw new UnauthorizedException('Invalid credentials');
-//     }
+  async login(dto: LoginDto) {
+    const user = await this.prisma.user.findUnique({ where: { email: dto.email } });
+    if (!user || !(await bcrypt.compare(dto.password, user.password))) {
+      throw new UnauthorizedException('Invalid credentials');
+    }
 
-//     const token = this.jwtService.sign({ sub: user.id, email: user.email });
-//     return { token, user: { id: user.id, email: user.email, name: user.name } };
-//   }
+    const token = this.jwtService.sign({ sub: user.id, email: user.email });
+    return { token, user: { id: user.id, email: user.email, name: user.name } };
+  }
 }
