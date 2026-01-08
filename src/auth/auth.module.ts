@@ -9,7 +9,7 @@ import { JwtStrategy } from './strategy/jwt.strategy';
   imports: [
     JwtModule.register({
       secret: 'your-secret-key-change-this-in-production', // Change this to a strong secret!
-      signOptions: { expiresIn: '7d' },
+      signOptions: { expiresIn:"60s" },
     }),
     PrismaModule,
   ],
