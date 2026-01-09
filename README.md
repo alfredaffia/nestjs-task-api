@@ -41,49 +41,46 @@ Interactive Swagger UI with:
 - Node.js v24+ (LTS recommended)
 - npm
 
-### Installation  
+### Installation
 
 ```bash
 git clone https://github.com/alfredaffia/nestjs-task-api.git
 cd nestjs-task-api
 npm install
-```
-### Database Setup (Important!)
-
-After cloning and running `npm install`, the database file `dev.db` **does not exist yet**, and no tables are created.
-
-Run this **once** to create the database file and apply the schema (tables like `users` and `tasks`):
-
-```bash
-npx prisma migrate dev --name init
-```
-```bash
-
-Run the app
-Bash npm run start:dev
+Database Setup (Important!)
+After npm install, the database file dev.db does not exist yet, and no tables are created.
+Run this once to create the database file and apply the schema (creates tables users and tasks):
+Bashnpx prisma migrate dev --name init
+Run the App
+Bashnpm run start:dev
 Server runs on http://localhost:3000
 API docs: http://localhost:3000/api
 Test Authentication
 
-Register:
+Register a new user:
 
-Bash curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
+Bashcurl -X POST http://localhost:3000/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
 
 Login to get token:
 
-Bash curl -X POST http://localhost:3000/auth/login -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123"}'
+Bashcurl -X POST http://localhost:3000/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"test@example.com","password":"secret123"}'
 
-Use token to create task:
+Use token to create a task (replace <your-token> with the token from login):
 
-Bash curl -X POST http://localhost:3000/tasks -H "Authorization: Bearer <your-token>" -H "Content-Type: application/json" -d '{"title":"My first task","status":"IN_PROGRESS"}'
+Bashcurl -X POST http://localhost:3000/tasks \
+  -H "Authorization: Bearer <your-token>" \
+  -H "Content-Type: application/json" \
+  -d '{"title":"My first task","status":"IN_PROGRESS"}'
 Database
-
-Uses local SQLite file: dev.db (created automatically)
-View data with DB Browser for SQLite
-
+Uses local SQLite file: dev.db (created automatically after migration)
+View/edit data with DB Browser for SQLite
 Tech Stack
 
-Framework: NestJS
+Framework: NestJS (TypeScript)
 ORM: Prisma 7
 Auth: JWT + bcrypt
 Validation: class-validator
@@ -103,3 +100,5 @@ NestJS Backend Developer | Uniuyo Student | Building toward ₦3M in 2026 💪
 📩 alfredaffia@gmail.com
 🔗 LinkedIn | GitHub
 Open to freelance NestJS/Node.js projects!
+
+Built with ❤️ in January 2026
