@@ -56,7 +56,7 @@ Test Authentication
 
 Register:
 
-```bash curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
+Bash curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
 
 Login to get token:
 
