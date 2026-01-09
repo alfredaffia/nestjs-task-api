@@ -56,15 +56,15 @@ Test Authentication
 
 Register:
 
-Bashcurl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
+```bash curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123","name":"Test"}'
 
 Login to get token:
 
-Bashcurl -X POST http://localhost:3000/auth/login -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123"}'
+Bash curl -X POST http://localhost:3000/auth/login -H "Content-Type: application/json" -d '{"email":"test@example.com","password":"secret123"}'
 
 Use token to create task:
 
-Bashcurl -X POST http://localhost:3000/tasks -H "Authorization: Bearer <your-token>" -H "Content-Type: application/json" -d '{"title":"My first task","status":"IN_PROGRESS"}'
+Bash curl -X POST http://localhost:3000/tasks -H "Authorization: Bearer <your-token>" -H "Content-Type: application/json" -d '{"title":"My first task","status":"IN_PROGRESS"}'
 Database
 
 Uses local SQLite file: dev.db (created automatically)
