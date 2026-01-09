@@ -41,12 +41,21 @@ Interactive Swagger UI with:
 - Node.js v24+ (LTS recommended)
 - npm
 
-### Installation
+### Installation  
 
 ```bash
 git clone https://github.com/alfredaffia/nestjs-task-api.git
 cd nestjs-task-api
 npm install
+```
+### Database Setup (Important!)
+
+After cloning and running `npm install`, the database file `dev.db` **does not exist yet**, and no tables are created.
+
+Run this **once** to create the database file and apply the schema (tables like `users` and `tasks`):
+
+```bash
+npx prisma migrate dev --name init
 
 Run the app
 Bash npm run start:dev
