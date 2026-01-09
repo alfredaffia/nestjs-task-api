@@ -104,3 +104,5 @@ NestJS Backend Developer | Uniuyo Student | Building toward ₦3M in 2026 💪
 Open to freelance NestJS/Node.js projects!
 
 Built with ❤️ in January 2026
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98f2f469-a666-4002-8c79-b38fb3b834b5" />
