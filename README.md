@@ -56,6 +56,8 @@ Run this **once** to create the database file and apply the schema (tables like 
 
 ```bash
 npx prisma migrate dev --name init
+```
+```bash
 
 Run the app
 Bash npm run start:dev
