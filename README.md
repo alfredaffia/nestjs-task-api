@@ -49,7 +49,7 @@ cd nestjs-task-api
 npm install
 
 Run the app
-Bashnpm run start:dev
+Bash npm run start:dev
 Server runs on http://localhost:3000
 API docs: http://localhost:3000/api
 Test Authentication
