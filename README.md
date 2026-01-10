@@ -24,10 +24,12 @@ Perfect for learning modern backend development or as a starter for freelance/cl
   - Validation pipes
   - Graceful error handling
 
-## Live API Documentation
+## Live Demo
 
-Run the app and visit:  
-👉 **http://localhost:3000/api**
+The API is deployed and running live on Render!  
+👉 **https://nestjs-task-api.onrender.com/api** (Swagger docs)
+
+Test it directly in your browser — register, login, create tasks.
 
 Interactive Swagger UI with:
 - Auth endpoints
@@ -102,3 +104,5 @@ NestJS Backend Developer | Uniuyo Student | Building toward ₦3M in 2026 💪
 Open to freelance NestJS/Node.js projects!
 
 Built with ❤️ in January 2026
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98f2f469-a666-4002-8c79-b38fb3b834b5" />
