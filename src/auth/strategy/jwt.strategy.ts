@@ -13,7 +13,7 @@ constructor(private configService: ConfigService) {
   });
 }
 
-  async validate(payload: any) {
-    return { userId: payload.sub, email: payload.email };
-  }
+async validate(payload: any) {
+  return { userId: payload.sub, email: payload.email, role: payload.role };
+}
 }
