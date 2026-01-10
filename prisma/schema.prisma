@@ -23,6 +23,7 @@ model Task {
   id          Int      @id @default(autoincrement())
   title       String
   description String?
+  role        Role     @default(USER)
   status      Status   @default(PENDING)
   user        User     @relation(fields: [userId], references: [id])
   userId      Int
